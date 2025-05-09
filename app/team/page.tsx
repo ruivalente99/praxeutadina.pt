@@ -98,13 +98,17 @@ export default function TeamPage() {
     member.praxeRole.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const membersByLevel = filteredMembers.reduce((acc: any, member: any) => {
-    if (!acc[member.level]) {
-      acc[member.level] = [];
-    }
-    acc[member.level].push(member);
-    return acc;
-  }, {});
+  interface MembersByLevel {
+    [key: string]: typeof mockTeamMembers
+  }
+  
+  const membersByLevel = filteredMembers.reduce<MembersByLevel>((acc, member) => {
+      if (!acc[member.level]) {
+        acc[member.level] = [];
+      }
+      acc[member.level].push(member);
+      return acc;
+    }, {});
 
   return (
     <div className="min-h-screen pt-24 pb-16">

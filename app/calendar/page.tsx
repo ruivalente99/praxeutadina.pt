@@ -7,14 +7,25 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { categoryColors, events, months } from '@/data/events';
 
+type Event = {
+  id: string;
+  title: string;
+  description: string;
+  date: string;
+  time: string;
+  location: string;
+  attendees: number;
+  category: string;
+  link: string;
+}; 
 export default function CalendarPage() {
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
-  const filteredEvents = events.filter(event => {
+  const filteredEvents: Event[] = (events as Event[]).filter((event: Event)  => {
     const eventDate = new Date(event.date);
     return eventDate.getMonth() === currentMonth && eventDate.getFullYear() === currentYear;
-  }).sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+  }).sort((a, b) => new Date(a?.date).getTime() - new Date((b as any)?.date).getTime());
 
   const nextMonth = () => {
     if (currentMonth === 11) {

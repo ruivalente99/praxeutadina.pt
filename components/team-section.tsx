@@ -24,13 +24,26 @@ export function TeamSection() {
     member.praxeRole.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const membersByLevel = filteredMembers.reduce((acc: any, member: any) => {
-    if (!acc[member.level]) {
-      acc[member.level] = [];
-    }
-    acc[member.level].push(member);
-    return acc;
-  }, {});
+  interface Member {
+    id: number;
+    level: number;
+    name: string;
+    role: string;
+    praxeRole: string;
+    course: string;
+    image: string;
+    bio: string;
+    email: string;
+    social: string;
+  }
+  
+  const membersByLevel: Record<string, Member[]> = filteredMembers.reduce((acc: Record<string, Member[]>, member: Member) => {
+      if (!acc[member.level]) {
+        acc[member.level] = [];
+      }
+      acc[member.level].push(member);
+      return acc;
+    }, {});
 
   return (
     <div className="min-h-screen pt-24 pb-16">
