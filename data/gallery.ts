@@ -1,13 +1,14 @@
 export const albums = [
   {
     id: 1,
-    title: 'Latada 2023',
-    description: 'Recepção aos novos estudantes da UTAD',
-    coverImage: 'https://images.pexels.com/photos/1150988/pexels-photo-1150988.jpeg',
-    date: '2023-09-22',
-    photoCount: 42,
-    tags: ['latada', 'caloiros', 'tradições'],
-    category: 'rituais'
+    title: 'Praxe de Veteranos 2023/2024',
+    description: '',
+    coverImage: '/images/album/pv2023.jpg',
+    date: '05-08-2024',
+    photoCount: 425,
+    tags: ['tradicoes', '2023/2024'],
+    category: 'tradicoes',
+    url: 'https://drive.google.com/drive/folders/1G4abpio7EgW8ZX9J4RfGJPa99F-dodXW'
   },
 ];
 

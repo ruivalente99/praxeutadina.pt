@@ -108,33 +108,33 @@ export default function BlogPage() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      {post.author?.picture && (
-                        <div className="relative w-10 h-10 rounded-full overflow-hidden mr-3">
-                          <Image
-                            src={urlFor(post.author.picture).url()}
-                            alt={post.author.name || ''}
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <p className="font-semibold">{post.author?.name}</p>
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-playfair font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <div className="p-6">
+                    <h3 className="text-2xl font-playfair font-semibold mb-2 group-hover:text-primary transition-colors">
                       {post.title}
                     </h3>
+                    <div className="flex items-center mb-4">
+                      {post.author?.picture && (
+                      <div className="relative w-8 h-8 rounded-full overflow-hidden mr-3">
+                        <Image
+                        src={urlFor(post.author.picture).url()}
+                        alt={post.author.name || ''}
+                        fill
+                        className="object-cover"
+                        />
+                      </div>
+                      )}
+                      <div>
+                      <p className="text-sm font-semibold">{post.author?.name}</p>
+                      </div>
+                    </div>
                     <p className="text-foreground/70 mb-4">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-sm text-foreground/60">
                       <span className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        {new Date(post.date || '').toLocaleDateString('pt-PT')}
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {new Date(post.date || '').toLocaleDateString('pt-PT')}
                       </span>
                     </div>
-                  </div>
+                    </div>
                 </Link>
               ))}
             </div>

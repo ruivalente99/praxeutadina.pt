@@ -1,17 +1,17 @@
 export const events = [
-  {
-    id: 1,
-    title: "Latada dos Caloiros",
-    description:
-      "Cerimónia de recepção aos novos estudantes. Traje académico obrigatório.",
-    date: "2024-09-20",
-    time: "14:00",
-    location: "Campus UTAD - Alameda Central",
-    category: "Ritual",
-    attendees: 500,
-    status: "upcoming",
-    link: "https://forms.google.com/latada2024",
-  },
+  // {
+  //   id: 1,
+  //   title: "Latada dos Caloiros",
+  //   description:
+  //     "Cerimónia de recepção aos novos estudantes. Traje académico obrigatório.",
+  //   date: "2024-09-20",
+  //   time: "14:00",
+  //   location: "Campus UTAD - Alameda Central",
+  //   category: "Ritual",
+  //   attendees: 500,
+  //   status: "upcoming",
+  //   link: "https://forms.google.com/latada2024",
+  // },
 ];
 
 export const months = [

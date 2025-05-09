@@ -6,15 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { links } from '@/data/links';
-
-const categories = [
-  { id: 'all', name: 'Todos' },
-  { id: 'institucional', name: 'Institucional' },
-  { id: 'académico', name: 'Académico' },
-  { id: 'tradição', name: 'Tradição' },
-  { id: 'serviços', name: 'Serviços' }
-];
+import { categories, links } from '@/data/links';
 
 export default function LinksPage() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -61,7 +53,7 @@ export default function LinksPage() {
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
-                  {React.createElement(link.icon, { className: "h-6 w-6 text-primary" })}
+                  {React.createElement(link.icon, { className: "h-6 w-6" })}
                 </div>
                 <h3 className="text-xl font-playfair font-semibold">{link.title}</h3>
               </div>

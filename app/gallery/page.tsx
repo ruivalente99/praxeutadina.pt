@@ -86,7 +86,7 @@ function AlbumCard({ album }: { album: any }) {
           ))}
         </div>
         <Button asChild variant="outline" className="w-full justify-between">
-          <Link href={`/gallery/${album.id}`}>
+          <Link href={album.url} target="_blank" rel="noopener noreferrer">
             Ver álbum
             <ChevronRight className="ml-2 h-4 w-4" />
           </Link>
