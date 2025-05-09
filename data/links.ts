@@ -80,14 +80,14 @@ export const links = [
   },
   {
     title: "Conselho de Veteranos da UTAD",
-    url: "cvutad.pt",
+    url: "https://cvutad.pt",
     icon: Globe,
     description: "Página oficial do Conselho de Veteranos da UTAD",
     category: "tradição",
   },
   {
     title: "AAUTAD",
-    url: "aautad.pt",
+    url: "https://aautad.pt",
     icon: Globe,
     description:
       "Associação Académica da Universidade de Trás-os-Montes e Alto Douro",
