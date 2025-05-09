@@ -60,6 +60,12 @@ export default function AboutUsPage() {
                 <h3 className="font-playfair font-semibold text-lg mb-1">{member.name}</h3>
                 <p className="font-semibold text-sm mb-1">{member.role}</p>
                 <p className="text-foreground/70 text-sm mb-4">{member.praxeRole}</p>
+               {/*  Create a quote component, small and differente letter */}
+               { Boolean(member.bio) && <p className="text-sm text-foreground/70 mb-4">
+                  <span className="font-playfair font-semibold text-lg">“</span>
+                  {member.bio}
+                  <span className="font-playfair font-semibold text-lg">”</span>
+                </p>}
                 <div className="flex justify-center space-x-3">
                   <Button size="icon" variant="outline" className="rounded-full" asChild>
                     <a href={`mailto:${member.email}`}>
