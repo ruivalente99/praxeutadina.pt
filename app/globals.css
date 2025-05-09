@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    /* Bacchus Theme - Wine and Oak */
+    --background: 28 22 20;
+    --foreground: 231 211 184;
+    --card: 35 28 25;
+    --card-foreground: 231 211 184;
+    --popover: 35 28 25;
+    --popover-foreground: 231 211 184;
+    --primary: 109 7 26;
+    --primary-foreground: 231 211 184;
+    --secondary: 75 46 29;
+    --secondary-foreground: 231 211 184;
+    --muted: 45 38 35;
+    --muted-foreground: 205 185 158;
+    --accent: 166 124 0;
+    --accent-foreground: 231 211 184;
+    --destructive: 165 35 35;
+    --destructive-foreground: 231 211 184;
+    --border: 55 48 45;
+    --input: 55 48 45;
+    --ring: 109 7 26;
+    --quote-bg: 45 38 35;
+    --quote-border: 109 7 26;
+  }
+
+  .aged-port {
+    /* Aged Port Wine Theme */
+    --background: 32 18 24;
+    --foreground: 235 215 190;
+    --card: 42 25 32;
+    --card-foreground: 235 215 190;
+    --popover: 42 25 32;
+    --popover-foreground: 235 215 190;
+    --primary: 130 15 35;
+    --primary-foreground: 235 215 190;
+    --secondary: 85 35 45;
+    --secondary-foreground: 235 215 190;
+    --muted: 52 35 42;
+    --muted-foreground: 209 189 164;
+    --accent: 175 95 15;
+    --accent-foreground: 235 215 190;
+    --destructive: 175 40 40;
+    --destructive-foreground: 235 215 190;
+    --border: 62 45 52;
+    --input: 62 45 52;
+    --ring: 130 15 35;
+    --quote-bg: 52 35 42;
+    --quote-border: 130 15 35;
+  }
+
+  .oak-barrel {
+    /* Oak Barrel Theme */
+    --background: 35 28 22;
+    --foreground: 225 208 185;
+    --card: 45 35 28;
+    --card-foreground: 225 208 185;
+    --popover: 45 35 28;
+    --popover-foreground: 225 208 185;
+    --primary: 95 65 35;
+    --primary-foreground: 225 208 185;
+    --secondary: 75 55 35;
+    --secondary-foreground: 225 208 185;
+    --muted: 55 45 38;
+    --muted-foreground: 199 182 159;
+    --accent: 145 95 45;
+    --accent-foreground: 225 208 185;
+    --destructive: 160 45 35;
+    --destructive-foreground: 225 208 185;
+    --border: 65 55 48;
+    --input: 65 55 48;
+    --ring: 95 65 35;
+    --quote-bg: 55 45 38;
+    --quote-border: 95 65 35;
+  }
+
+  .vineyard {
+    /* Vineyard Theme */
+    --background: 25 32 22;
+    --foreground: 220 228 215;
+    --card: 32 42 28;
+    --card-foreground: 220 228 215;
+    --popover: 32 42 28;
+    --popover-foreground: 220 228 215;
+    --primary: 45 85 35;
+    --primary-foreground: 220 228 215;
+    --secondary: 55 75 45;
+    --secondary-foreground: 220 228 215;
+    --muted: 42 52 38;
+    --muted-foreground: 194 202 189;
+    --accent: 85 125 45;
+    --accent-foreground: 220 228 215;
+    --destructive: 155 45 35;
+    --destructive-foreground: 220 228 215;
+    --border: 52 62 48;
+    --input: 52 62 48;
+    --ring: 45 85 35;
+    --quote-bg: 42 52 38;
+    --quote-border: 45 85 35;
+  }
+
+  .cellar {
+    /* Wine Cellar Theme */
+    --background: 30 25 28;
+    --foreground: 228 223 226;
+    --card: 38 32 35;
+    --card-foreground: 228 223 226;
+    --popover: 38 32 35;
+    --popover-foreground: 228 223 226;
+    --primary: 85 35 55;
+    --primary-foreground: 228 223 226;
+    --secondary: 65 45 55;
+    --secondary-foreground: 228 223 226;
+    --muted: 48 42 45;
+    --muted-foreground: 202 197 200;
+    --accent: 115 65 85;
+    --accent-foreground: 228 223 226;
+    --destructive: 165 45 45;
+    --destructive-foreground: 228 223 226;
+    --border: 58 52 55;
+    --input: 58 52 55;
+    --ring: 85 35 55;
+    --quote-bg: 48 42 45;
+    --quote-border: 85 35 55;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  blockquote {
+    @apply relative p-6 my-8 bg-[rgb(var(--quote-bg))] border-l-4 border-[rgb(var(--quote-border))] rounded-r-sm;
+  }
+
+  blockquote::before {
+    content: '"';
+    @apply absolute -top-4 left-4 text-6xl font-playfair text-[rgb(var(--quote-border))] opacity-50;
+  }
+
+  blockquote p {
+    @apply text-foreground/90 font-garamond italic;
+  }
+
+  blockquote footer {
+    @apply mt-4 text-sm text-foreground/70 font-playfair not-italic;
+  }
+
+  /* Theme-specific backgrounds */
+  :root {
+    background-image: url('/textures/wine-stained-wood.png');
+    background-repeat: repeat;
+  }
+
+  .aged-port {
+    background-image: url('/textures/aged-wood.png');
+    background-repeat: repeat;
+  }
+
+  .oak-barrel {
+    background-image: url('/textures/oak-grain.png');
+    background-repeat: repeat;
+  }
+
+  .vineyard {
+    background-image: url('/textures/vineyard-wood.png');
+    background-repeat: repeat;
+  }
+
+  .cellar {
+    background-image: url('/textures/cellar-stone.png');
+    background-repeat: repeat;
+  }
+}
+
+.fancy-heading {
+  @apply relative inline-block text-center pb-4 mb-8;
+}
+
+.fancy-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, hsl(var(--accent)), transparent);
+}
+
+.fancy-card {
+  @apply rounded-sm bg-card shadow-lg relative overflow-hidden border border-border/30;
+  background-image: 
+    linear-gradient(to bottom right, 
+      rgba(var(--primary), 0.1),
+      rgba(var(--secondary), 0.1)
+    );
+  background-repeat: repeat;
+}
+
+.fancy-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border: 1px solid hsl(var(--border) / 0.1);
+  border-radius: calc(0.25rem - 2px);
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--border) / 0.1) 0%,
+    transparent 100%
+  );
+}
+
+.first-letter::first-letter {
+  @apply float-left text-5xl font-playfair font-bold text-primary mr-3 mt-1;
+}
+
+/* Theme-specific card styles */
+:root .fancy-card {
+  box-shadow: 0 4px 12px rgba(109, 7, 26, 0.2);
+  border-color: rgba(109, 7, 26, 0.2);
+}
+
+.aged-port .fancy-card {
+  box-shadow: 0 4px 12px rgba(130, 15, 35, 0.2);
+  border-color: rgba(130, 15, 35, 0.2);
+}
+
+.oak-barrel .fancy-card {
+  box-shadow: 0 4px 12px rgba(95, 65, 35, 0.2);
+  border-color: rgba(95, 65, 35, 0.2);
+}
+
+.vineyard .fancy-card {
+  box-shadow: 0 4px 12px rgba(45, 85, 35, 0.2);
+  border-color: rgba(45, 85, 35, 0.2);
+}
+
+.cellar .fancy-card {
+  box-shadow: 0 4px 12px rgba(85, 35, 55, 0.2);
+  border-color: rgba(85, 35, 55, 0.2);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+  border-left: 1px solid hsl(var(--border));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: var(--radius);
+  border: 3px solid hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}
