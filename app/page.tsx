@@ -174,7 +174,7 @@ export default function HomePage() {
               <h2 className="text-2xl font-playfair font-bold text-parchment">Recursos Essenciais</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {resources.map((resource, index) => (
+              {resources.filter(r => !r.isArchive).map((resource, index) => (
                 <motion.a
                   key={index}
                   href={resource.url}
