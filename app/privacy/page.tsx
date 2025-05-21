@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             <h2>6. Contato</h2>
             <p>
               Para questões relacionadas à privacidade, entre em contato através do email:
-              praxeutadina@proton.me
+              geral@praxeutadina.pt
             </p>
           </div>
         </motion.div>

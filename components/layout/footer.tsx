@@ -44,7 +44,7 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex space-x-6">
             <a 
-              href="mailto:praxeutadina@proton.me" 
+              href="mailto:geral@praxeutadina.pt" 
               className="text-foreground/60 hover:text-primary transition-colors"
               title="Email"
             >
@@ -100,10 +100,10 @@ export default function Footer() {
               Política de Privacidade
             </Link>
             <a 
-              href="mailto:praxeutadina@proton.me" 
+              href="mailto:geral@praxeutadina.pt" 
               className="hover:text-primary transition-colors"
             >
-              praxeutadina@proton.me
+              geral@praxeutadina.pt
             </a>
           </nav>
 

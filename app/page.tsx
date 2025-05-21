@@ -66,7 +66,7 @@ export default function HomePage() {
             className="flex justify-center space-x-6 mb-8"
           >
             <a 
-              href="mailto:praxeutadina@proton.me"
+              href="mailto:geral@praxeutadina.pt"
               className="text-parchment/80 hover:text-primary transition-colors"
               title="Email"
             >
