@@ -6,6 +6,14 @@ export const resources = [
     isArchive: false,
     description: "Código da Praxe",
     icon: Scroll,
+    url: "/docs/os10mandamentosdebaco.pdf",
+    date: "2025"
+  },
+  {
+    name: "Os 10 Mandamentos de Baco 2023",
+    isArchive: true,
+    description: "Código da Praxe",
+    icon: Scroll,
     url: "/docs/codigodepraxe.pdf",
     date: "2023"
   },
